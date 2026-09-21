@@ -1,0 +1,34 @@
+<DOCTYPE.html>
+    <html lang = "en">
+    <head>
+        <meta charset="UTF=8">
+        <title>TO-DO PAL</title>
+        
+        <body onload = "get()">
+            <h3>You can be produtive too!</h3>
+            <h3>Welcome!</h3>.
+            <p id = "savedText"></p>
+            <input type = "text" id="input" placeholder="Enter your name"/>
+            <button onclick ="save()">LETS GO!!!</button>
+            <script>
+                function get(){
+                    var storedItem = localStorage.getItem("storedItem");
+                    if (storedItem){
+                        document.getElementById("savedText").innerHTML= "Welcome," + storedItem + "!";
+                    }
+
+                }
+            function save(){
+                var Item = document.getElementById("input").value;
+                localStorage.setItem("storedItem, Item");
+                document.getElementById("savedText").innerHTML= "Welcome," + Item + "!";
+
+
+            
+            }
+
+            </script>
+        </body>
+
+    </html>
+</DOCTYPE.html>
